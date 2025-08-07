@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Semangat Sayang!</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #ff4d4d;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 20px;
+      color: #cc0000;
+      margin-top: 20px;
+      animation: slideIn 3s ease-in-out;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+      margin: 40px auto;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(-45deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Sayang ❤️</h1>
+  <div class="heart"></div>
+  <p>Lagi hari pertama haid ya? 😣</p>
+  <p>Semangat terus ya! Kamu kuat banget 💪</p>
+  <p>Jangan lupa banyak minum air putih dan istirahat ya 🥰</p>
+  <p>Aku di sini selalu ada buat kamu 🤗</p>
+</body>
+</html>
