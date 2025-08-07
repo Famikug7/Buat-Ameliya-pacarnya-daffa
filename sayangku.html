@@ -1,146 +1,131 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Semangat Sayang!</title>
-  <style>
-    body {
-      background-color: #ffe6e6;
-      font-family: 'Comic Sans MS', cursive;
-      text-align: center;
-      padding: 50px;
-      overflow: hidden;
-    }
-
-    h1 {
-      font-size: 40px;
-      color: #ff4d4d;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    p {
-      font-size: 20px;
-      color: #cc0000;
-      margin-top: 10px;
-      animation: slideIn 3s ease-in-out;
-    }
-
-    .heart {
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      position: relative;
-      transform: rotate(-45deg);
-      animation: beat 1s infinite;
-      margin: 40px auto;
-      cursor: pointer;
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      width: 100px;
-      height: 90px;
-      background-color: red;
-      border-radius: 50%;
-      position: absolute;
-    }
-
-    .heart::before {
-      top: -50px;
-      left: 0;
-    }
-
-    .heart::after {
-      left: 50px;
-      top: 0;
-    }
-
-    .gallery {
-      display: none;
-      margin-top: 40px;
-      position: relative;
-      width: 300px;
-      height: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .gallery img {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-
-    /* Posisi membentuk love */
-    .img1 { top: 0; left: 100px; }
-    .img2 { top: 50px; left: 0; }
-    .img3 { top: 50px; left: 200px; }
-    .img4 { top: 150px; left: 50px; }
-    .img5 { top: 150px; left: 150px; }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1) rotate(-45deg); }
-      50% { transform: scale(1.1) rotate(-45deg); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Hai Sayang ❤️</h1>
-  <div class="heart" onclick="showGallery()"></div>
-  <p>Lagi hari pertama haid ya? 😣</p>
-  <p>Semangat terus ya! Kamu kuat banget 💪</p>
-  <p>Aku di sini selalu ada buat kamu 🤗</p>
-
-  <div class="gallery" id="gallery">
-    <img src="IMG-20250706-WA0019.jpg" alt="Foto 1" class="img1">
-    <img src="IMG-20250706-WA0082.jpg" alt="Foto 2" class="img2">
-    <img src="IMG-20250706-WA0083.jpg" alt="Foto 3" class="img3">
-    <img src="IMG-20250706-WA0084.jpg" alt="Foto 4" class="img4">
-    <img src="IMG-20250615-WA0027.jpg" alt="Foto 5" class="img5">
-  </div>
-
-  <script>
-    function showGallery() {
-      document.getElementById('gallery').style.display = 'block';
-    }
-  </script>
-
-</body>
-</html>    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-  <h1>Hai Sayang ❤️</h1>
-  <div class="heart"></div>
-  <p>Lagi hari pertama haid ya? 😣</p>
-  <p>Semangat terus ya! Kamu kuat banget 💪</p>
-  <p>Jangan lupa banyak minum air putih dan istirahat ya 🥰</p>
-  <p>Aku di sini selalu ada buat kamu 🤗</p>
-</body>
-</html>
+‎<!DOCTYPE html>
+‎<html lang="id">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <title>Semangat Sayang!</title>
+‎  <style>
+‎    body {
+‎      background-color: #ffe6e6;
+‎      font-family: 'Comic Sans MS', cursive;
+‎      text-align: center;
+‎      padding: 50px;
+‎      overflow: hidden;
+‎    }
+‎
+‎    h1 {
+‎      font-size: 40px;
+‎      color: #ff4d4d;
+‎      animation: fadeIn 2s ease-in-out;
+‎    }
+‎
+‎    p {
+‎      font-size: 20px;
+‎      color: #cc0000;
+‎      margin-top: 10px;
+‎      animation: slideIn 3s ease-in-out;
+‎    }
+‎
+‎    .heart {
+‎      width: 100px;
+‎      height: 90px;
+‎      background-color: red;
+‎      position: relative;
+‎      transform: rotate(-45deg);
+‎      animation: beat 1s infinite;
+‎      margin: 40px auto;
+‎      cursor: pointer;
+‎    }
+‎
+‎    .heart::before,
+‎    .heart::after {
+‎      content: "";
+‎      width: 100px;
+‎      height: 90px;
+‎      background-color: red;
+‎      border-radius: 50%;
+‎      position: absolute;
+‎    }
+‎
+‎    .heart::before {
+‎      top: -50px;
+‎      left: 0;
+‎    }
+‎
+‎    .heart::after {
+‎      left: 50px;
+‎      top: 0;
+‎    }
+‎
+‎    .gallery {
+‎      display: none;
+‎      margin-top: 40px;
+‎      position: relative;
+‎      width: 300px;
+‎      height: 300px;
+‎      margin-left: auto;
+‎      margin-right: auto;
+‎    }
+‎
+‎    .gallery img {
+‎      position: absolute;
+‎      width: 100px;
+‎      height: 100px;
+‎      object-fit: cover;
+‎      border-radius: 20px;
+‎      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+‎      transition: transform 0.3s;
+‎    }
+‎
+‎    .img1 { top: 0; left: 100px; }
+‎    .img2 { top: 50px; left: 0; }
+‎    .img3 { top: 50px; left: 200px; }
+‎    .img4 { top: 150px; left: 50px; }
+‎    .img5 { top: 150px; left: 150px; }
+‎
+‎    @keyframes beat {
+‎      0%, 100% { transform: scale(1) rotate(-45deg); }
+‎      50% { transform: scale(1.1) rotate(-45deg); }
+‎    }
+‎
+‎    @keyframes fadeIn {
+‎      from { opacity: 0; transform: translateY(-30px); }
+‎      to { opacity: 1; transform: translateY(0); }
+‎    }
+‎
+‎    @keyframes slideIn {
+‎      from { opacity: 0; transform: translateY(30px); }
+‎      to { opacity: 1; transform: translateY(0); }
+‎    }
+‎  </style>
+‎</head>
+‎<body>
+‎
+‎  <!-- Musik Otomatis -->
+‎  <audio autoplay loop>
+‎    <source src="musik.mp3" type="audio/mpeg">
+‎    Browser kamu tidak mendukung audio.
+‎  </audio>
+‎
+‎  <h1>Hai Sayang ❤️</h1>
+‎  <div class="heart" onclick="showGallery()"></div>
+‎  <p>Lagi hari pertama haid ya? 😣</p>
+‎  <p>Semangat terus ya! Kamu kuat banget 💪</p>
+‎  <p>Jangan lupa banyak minum air putih dan istirahat ya 🥰</p>
+‎  <p>Aku di sini selalu ada buat kamu 🤗</p>
+‎
+‎  <div class="gallery" id="gallery">
+‎    <img src="IMG-20250706-WA0019.jpg" alt="Foto 1" class="img1">
+‎    <img src=IMG-20250706-WA0082.jpg" alt="Foto 2" class="img2">
+‎    <img src="IMG-20250706-WA0083.jpg" alt="Foto 3" class="img3">
+‎    <img src="IMG-20250706-WA0084.jpg" alt="Foto 4" class="img4">
+‎    <img src="IMG-20250615-WA0027.jpg" alt="Foto 5" class="img5">
+‎  </div>
+‎
+‎  <script>
+‎    function showGallery() {
+‎      document.getElementById('gallery').style.display = 'block';
+‎    }
+‎  </script>
+‎
+‎</body>
+‎</html>
