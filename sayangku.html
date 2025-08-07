@@ -1,68 +1,152 @@
-‎<!DOCTYPE html>
-‎<html lang="id">
-‎<head>
-‎  <meta charset="UTF-8">
-‎  <title>Semangat Sayang!</title>
-‎  <style>
-‎    body {
-‎      background-color: #ffe6e6;
-‎      font-family: 'Comic Sans MS', cursive;
-‎      text-align: center;
-‎      padding: 50px;
-‎      overflow: hidden;
-‎    }
-‎
-‎    h1 {
-‎      font-size: 40px;
-‎      color: #ff4d4d;
-‎      animation: fadeIn 2s ease-in-out;
-‎    }
-‎
-‎    p {
-‎      font-size: 20px;
-‎      color: #cc0000;
-‎      margin-top: 10px;
-‎      animation: slideIn 3s ease-in-out;
-‎    }
-‎
-‎    .heart {
-‎      width: 100px;
-‎      height: 90px;
-‎      background-color: red;
-‎      position: relative;
-‎      transform: rotate(-45deg);
-‎      animation: beat 1s infinite;
-‎      margin: 40px auto;
-‎      cursor: pointer;
-‎    }
-‎
-‎    .heart::before,
-‎    .heart::after {
-‎      content: "";
-‎      width: 100px;
-‎      height: 90px;
-‎      background-color: red;
-‎      border-radius: 50%;
-‎      position: absolute;
-‎    }
-‎
-‎    .heart::before {
-‎      top: -50px;
-‎      left: 0;
-‎    }
-‎
-‎    .heart::after {
-‎      left: 50px;
-‎      top: 0;
-‎    }
-‎
-‎    .gallery {
-‎      display: none;
-‎      margin-top: 40px;
-‎      position: relative;
-‎      width: 300px;
-‎      height: 300px;
-‎      margin-left: auto;
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Semangat Sayang!</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe6f0, #ffcccc);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #e60073;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 20px;
+      color: #b30059;
+      margin-top: 10px;
+      animation: slideIn 3s ease-in-out;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+      margin: 30px auto;
+      cursor: pointer;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    .gallery {
+      display: none;
+      margin-top: 40px;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .img1 { top: 0; left: 100px; }
+    .img2 { top: 50px; left: 0; }
+    .img3 { top: 50px; left: 200px; }
+    .img4 { top: 150px; left: 50px; }
+    .img5 { top: 150px; left: 150px; }
+
+    .gif-area {
+      margin-top: 20px;
+    }
+
+    .gif-area img {
+      width: 150px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.1) rotate(-45deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik Otomatis -->
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+    Maaf, browser kamu tidak mendukung audio.
+  </audio>
+
+  <h1>Hai Sayang ❤️</h1>
+
+  <!-- Gambar animasi (bisa diganti GIF lain) -->
+  <div class="gif-area">
+    <img src="https://media.tenor.com/Ia8cGjI3iZsAAAAi/girl-sad.gif" alt="Cewek sakit perut">
+  </div>
+
+  <!-- Hati interaktif -->
+  <div class="heart" onclick="showGallery()"></div>
+
+  <!-- Teks penyemangat -->
+  <p>Lagi hari pertama haid ya? 😣</p>
+  <p>Semangat terus ya! Kamu kuat banget 💪</p>
+  <p>Jangan lupa banyak minum air putih dan istirahat ya 🥰</p>
+  <p>Aku di sini selalu ada buat kamu 🤗</p>
+
+  <!-- Foto-foto pacar -->
+  <div class="gallery" id="gallery">
+    <img src="foto1.jpg" alt="Foto 1" class="img1">
+    <img src="foto2.jpg" alt="Foto 2" class="img2">
+    <img src="foto3.jpg" alt="Foto 3" class="img3">
+    <img src="foto4.jpg" alt="Foto 4" class="img4">
+    <img src="foto5.jpg" alt="Foto 5" class="img5">
+  </div>
+
+  <script>
+    function showGallery() {
+      document.getElementById('gallery').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>‎      margin-left: auto;
 ‎      margin-right: auto;
 ‎    }
 ‎
